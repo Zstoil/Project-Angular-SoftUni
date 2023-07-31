@@ -3,5 +3,11 @@
     height: 100px;
     max-width: 1200px;
     margin: 0 auto;
+    border-top-left-radius: 11em 15em;
+}
+
+.footer p{
+    text-align: center;
+   padding-top: 20px;
 }
  
