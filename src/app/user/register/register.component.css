@@ -1,0 +1,53 @@
+.container-register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #cdc9c9;   
+}
+
+.site-register{
+    display: flex;
+    justify-content: end;
+    width: 750px;
+    padding: 2em;
+    background-image: url(https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=852&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -16em;
+    border-radius: 2em;
+}
+
+.site-register form{
+    width: 300px;
+    margin: 0;
+}
+
+.form-register{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0;
+ }   
+
+.form-register h2{
+    text-align: center;
+}
+
+.form-register input{
+    padding: 0.5em 1em;
+    border-radius: 2em;
+}
+
+.submit a{
+    text-decoration: none;
+    background: rgba(174, 60, 51, 1);
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    color: white;
+}
+
+.submit{
+    margin: 0 auto;
+    margin-top: 2em;
+}
