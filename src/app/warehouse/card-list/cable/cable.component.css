@@ -31,7 +31,7 @@ h3 {
     padding: 15px;
 }
 
-.card a {
+.card a, .back{
     display: inline-block;
     padding: 5px 10px;
     background: rgba(50, 125, 196, 1);
