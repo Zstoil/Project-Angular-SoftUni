@@ -1,12 +1,23 @@
+/* @media (width <= 460px) {
+  
+
+} */
+
+
 .main{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.main img{
+.main-img{
     width: 450px;
     height: 350px;
+}
+
+.main-img img{
+    width: 100%;
 }
 
 .content h1{

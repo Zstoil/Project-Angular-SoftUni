@@ -4,12 +4,14 @@
     justify-content: space-around;
     padding: 10px;
     background: #e9f3f8;
+    flex-wrap: wrap;
 }
 
 .site-header ul{
     display: flex;
     gap: 2em;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .site-header ul li{
@@ -25,11 +27,4 @@
     border-radius: 7px;
 }
 
-.login{
-    display: flex;
-    justify-content: space-between;
-}
 
-.login p{
-    margin-bottom: 0;
-}
