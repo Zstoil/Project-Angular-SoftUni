@@ -1,15 +1,31 @@
 <div class="container-login"> 
     <div class="site-login">  
-            <form action="">
+            <form #form="ngForm" (ngSubmit)="loginHandler()">
                 <div class="form-login">
                     <h2>Login Form</h2>
                     
                     <label for="email">Email</label>
-                    <input type="email">
-
+                    <input #emailInput="ngModel" ngModel type="email" required [appEmail]="['bg','com']" name="email">
+                    <!-- {{emailInput.value}} -->
+                   
+                    <ng-container *ngIf='emailInput.touched'>
+                    <p class="error" *ngIf="emailInput.errors?.['required']">
+                        Email is required!
+                    </p>
+                    <p class="error" *ngIf="emailInput.errors?.['appEmailValidator']">
+                        Email is not valid!
+                    </p>
+                    </ng-container>
                     <label for="password">Password</label>
-                    <input type="password">
-
+                    <input ngModel type="password" #passwordInput="ngModel" required name="password" required [minlength]="5">
+                    <ng-container *ngIf='passwordInput.touched'>
+                        <p class="error" *ngIf="passwordInput.errors?.['required']">
+                            Password is required!
+                        </p>
+                        <p class="error" *ngIf="passwordInput.errors?.['minlength']">
+                            Password must be at least 5 characters!
+                        </p>
+                    </ng-container>
                     <span class="submit">
                         <a href="#">Register Now</a>
                     </span>

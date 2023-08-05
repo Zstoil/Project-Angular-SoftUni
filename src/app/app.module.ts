@@ -7,6 +7,8 @@ import { CoreModule } from './core/core.module';
 import { UserModule } from './user/user.module';
 import { MainComponent } from './main/main.component';
 import { WarehouseModule } from './warehouse/warehouse.module';
+import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -18,9 +20,11 @@ import { WarehouseModule } from './warehouse/warehouse.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CoreModule,
     UserModule,
-    WarehouseModule
+    WarehouseModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
