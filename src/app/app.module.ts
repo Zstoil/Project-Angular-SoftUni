@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { WarehouseModule } from './warehouse/warehouse.module';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { appInterceptorProvider } from './app-interceptor';
 
 
 
@@ -26,7 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     WarehouseModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    appInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

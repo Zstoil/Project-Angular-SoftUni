@@ -16,10 +16,19 @@ export class LoginComponent {
   constructor(private userService: UserService, private router:Router){}
 
   loginHandler(form: NgForm): void{
-    console.log(form);
-
-    this.userService.loginHandler();
-    this.router.navigate(["/"]);
+    
+    {
+      if (form.invalid) {return;}
+ 
+       const {email, password} = form.value;
+       this.userService.login(email!,password!)
+       .subscribe(
+         user => {
+           this.userService.user = user;
+           this.router.navigate(['/']);
+         }
+       )
+      }
   }
 
   
