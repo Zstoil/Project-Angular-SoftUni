@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { appEmailDomains } from 'src/app/shared/constants';
-// import { UserService } from '../user.service';
+import { UserService } from '../user.service';
+import { Router } from '@angular/router';
  
 @Component({
   selector: 'app-login',
@@ -10,15 +12,15 @@ import { appEmailDomains } from 'src/app/shared/constants';
 export class LoginComponent {
 
   appEmailDomains= appEmailDomains
-  // UserService: any;
+  
+  constructor(private userService: UserService, private router:Router){}
 
-  // loginHandler(form: NgForm): void{
-  //   this.UserService.user ={
-  //     username:'John'
-  //   }
-  // } as any;
-  loginHandler(){
-    console.log();
-    
+  loginHandler(form: NgForm): void{
+    console.log(form);
+
+    this.userService.loginHandler();
+    this.router.navigate(["/"]);
   }
+
+  
 }

@@ -11,10 +11,16 @@
 
         <div class="box-header">
             <ul>
-                <li><a href="">UserName</a></li>
+                
+                <ng-container *ngIf="!isLoggedIn">
                 <li><a routerLink="/login">Login</a></li>
                 <li><a routerLink="/register">Register</a></li>
-                <li><a href="">Logout</a></li>
+                </ng-container>
+                <ng-container *ngIf="isLoggedIn">
+                <li><a href="">{{firstName}}' profile</a></li>
+                <li (click)="logout()"><a href="">Logout</a></li>
+                </ng-container>
+                
             </ul>
         </div>
     </header>

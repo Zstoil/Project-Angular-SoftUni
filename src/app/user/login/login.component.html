@@ -1,6 +1,6 @@
 <div class="container-login"> 
     <div class="site-login">  
-            <form #form="ngForm" (ngSubmit)="loginHandler()">
+            <form #form="ngForm" (ngSubmit)="loginHandler(form)">
                 <div class="form-login">
                     <h2>Login Form</h2>
                     
@@ -27,7 +27,7 @@
                         </p>
                     </ng-container>
                     <span class="submit">
-                        <a href="#">Register Now</a>
+                        <button>Register Now</button>
                     </span>
                 </div>
             </form> 

@@ -34,7 +34,7 @@
     border-radius: 2em;
 }
 
-.submit a{
+.submit button{
     text-decoration: none;
     background: rgba(174, 60, 51, 1);
     padding: 0.5em 1em;
