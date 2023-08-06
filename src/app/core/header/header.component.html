@@ -17,7 +17,7 @@
                 <li><a routerLink="/register">Register</a></li>
                 </ng-container>
                 <ng-container *ngIf="isLoggedIn">
-                <li><a href="">{{firstName}}' profile</a></li>
+                <li><a href="">{{username}}' profile</a></li>
                 <li (click)="logout()"><a href="">Logout</a></li>
                 </ng-container>
                 

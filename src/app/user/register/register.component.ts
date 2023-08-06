@@ -30,7 +30,7 @@ export class RegisterComponent {
 
 
     registerHandler(){
-     if (this.form.invalid) {return;}
+    //  if (this.form.invalid) {return;}
 
       const {username, email, pass: {password, rePassword} = {}} = this.form.value;
       this.userService.register(username!,email!,password!,rePassword!)

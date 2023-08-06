@@ -11,13 +11,13 @@ const apiURL = environment.apiUrl;
 export class UserService {
 
   user: IUser | undefined;
-  // USER_KEY = '[user]';
+  USER_KEY = '[user]';
 
   constructor(private http: HttpClient) {}
   
-  // get isLogged(): boolean {
-  //   return !!this.user;
-  // }
+  get isLogged(): boolean {
+    return !!this.user;
+  }
 
   // loginHandler(): void {
   //   this.user = {
@@ -28,16 +28,16 @@ export class UserService {
   //   localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
   // }
 
-  // logout(): void {
-  //   this.user = undefined;
-  //   localStorage.removeItem(this.USER_KEY);
-  // }
+  logout(): void {
+    this.user = undefined;
+    localStorage.removeItem(this.USER_KEY);
+  }
 
   register(username:string, email:string, password:string, rePassword:string){
-  return this.http.post<IUser>('/register' , {username,email,password,rePassword}) 
+  return this.http.post<IUser>('/users/register' , {username,email,password,rePassword}) 
   }
 
   login(email:string, password:string){
-  return this.http.post<any>('/login' , {email,password}) 
+  return this.http.post<any>('/users/login' , {email,password}) 
   }
 }
